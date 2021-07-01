@@ -9,11 +9,19 @@ struct CommandlineArgInput
 };
 
 
+struct Program
+{
+    byte *fbuf;
+    size_t file_head_size;
+    byte *code_area;
+    byte *current_execute;
+};
+
+
 struct MainMachine
 {
     struct CommandlineArgInput cmdinput;
-    byte *fbuf;            // an array: space get from malloc
-    byte *current_excute;  // a real pointer
+    struct Program program;
 };
 
 void initMachine(struct MainMachine *mac, const struct CommandlineArgInput *cmd);
