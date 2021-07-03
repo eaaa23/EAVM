@@ -15,6 +15,9 @@ struct Program
     size_t file_head_size;
     byte *code_area;
     byte *current_execute;
+    size_t stack_size;
+    byte *stack_area;
+    
 };
 
 
@@ -24,8 +27,9 @@ struct MainMachine
     struct Program program;
 };
 
-void initMachine(struct MainMachine *mac, const struct CommandlineArgInput *cmd);
+void __init__Machine(struct MainMachine *mac, const struct CommandlineArgInput *cmd);
 void readProgram(struct MainMachine *mac);
+void initProgramStackSpace(struct MainMachine *mac);
 void executeProgram(struct MainMachine *mac);
 
 

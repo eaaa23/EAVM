@@ -1,0 +1,13 @@
+Commands:
+    [OPNUM] + [PARAMS]
+
+OPNUM:
+    One   byte opnum: [01-7f]
+    Two   byte opnum: [80-ff] [00-7f]
+    Three byte opnum: [80-ff] [80-ff] [00-7f]
+    Four  byte opnum: [80-ff] [80-ff] [80-ff] [00-7f]
+
+opnum 01:
+    Mean: Declare a variable in stack
+    PARAMS:
+    LOW [Byte1 Byte2...] HIGH

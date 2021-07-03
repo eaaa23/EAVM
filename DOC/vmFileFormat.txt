@@ -4,5 +4,14 @@ number 0  1  2  3   Bytes, Magic Number
 start [E5 E1 F6 ED] end
 as little endian, use 0xEDF6E1E5 in checking
 
-number 4  5  6  7   Bytes, Full head size(little endian)
+number 4  5  6  7   Bytes, DWORD Full head size(little endian)
+
+number 8  9  10 11  Bytes, VM Version
+    8: Major Version
+    9: Minor Version
+    10: Mini Version
+    11: Developing Version
+    In first develop, version is 0.0.x.0
+
+number 12 13 14 15 Bytes, DWORD Stack Size(little endian)
 

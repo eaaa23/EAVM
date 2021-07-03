@@ -1,7 +1,7 @@
 include ../make_config
 include ../make_consts_unix
 
-core.o: main.c main.h ../base.h
+core.o: main.c main.h
 	$(GCC) -c main.c -o core.o
 
 clean:

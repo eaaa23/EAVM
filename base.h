@@ -8,4 +8,6 @@
 
 typedef char byte;
 
+void _Noreturn printErrorAndExit(const char *template, ...);
+
 #endif
